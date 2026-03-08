@@ -1,0 +1,128 @@
+/* --- RESET BÁSICO --- */
+/* Tira as margens padrão do navegador e muda a forma de calcular o tamanho das caixas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- FUNDO DA TELA --- */
+body {
+    background-color: #f0f2f5; /* Um cinza bem clarinho, padrão de muitos apps */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Faz o body ocupar 100% da altura da tela */
+}
+
+/* --- ÁREA PRINCIPAL --- */
+main {
+    flex: 1; /* Empurra o footer lá para baixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo na horizontal */
+    justify-content: center; /* Centraliza tudo na vertical */
+    padding: 20px;
+}
+
+/* --- TEXTOS DO TOPO --- */
+.topo {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.topo h1 {
+    color: #1a73e8; /* Azul estilo Google */
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.topo p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* --- CAIXA DO FORMULÁRIO --- */
+.form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar efeito 3D */
+    width: 100%;
+    max-width: 400px; /* Não deixa o formulário ficar gigante no PC */
+}
+
+/* --- ELEMENTOS DO FORMULÁRIO --- */
+form {
+    display: flex;
+    flex-direction: column; /* Coloca os inputs um embaixo do outro */
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none; /* Tira aquela borda preta feia ao clicar */
+    transition: border-color 0.3s;
+}
+
+/* Efeito quando o usuário clica para digitar no input */
+input:focus {
+    border-color: #1a73e8;
+}
+
+/* --- BOTÃO DE CONTINUAR --- */
+button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito quando passa o mouse por cima do botão */
+button:hover {
+    background-color: #1557b0; /* Fica um azul mais escuro */
+}
+
+/* --- RODAPÉ --- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    color: #888;
+    font-size: 13px;
+    border-top: 1px solid #ddd;
+}
+
+/* --- LINK DE NAVEGAÇÃO ENTRE TELAS --- */
+.form a {
+    display: block; /* Faz o link ocupar a linha inteira, facilitando centralizar */
+    text-align: center;
+    margin-top: 20px;
+    color: #1a73e8;
+    text-decoration: none; /* Tira o sublinhado padrão */
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+/* Efeito quando passa o mouse por cima do link */
+.form a:hover {
+    color: #1557b0;
+    text-decoration: underline; /* Coloca o sublinhado só no hover para dar feedback */
+}
